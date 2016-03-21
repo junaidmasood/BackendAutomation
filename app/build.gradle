@@ -1,0 +1,76 @@
+// Include the GAE plug-in as a dependency
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+       // classpath 'org.gradle.api.plugins:gradle-gae-plugin:0.9'
+        classpath 'com.google.appengine:gradle-appengine-plugin:1.9.32'
+
+    }
+}
+
+// This generates some warnings about gradle 2.0 compatibility
+//apply plugin: 'gae'
+apply plugin: 'war'
+apply plugin: 'jetty'
+apply plugin: 'appengine'
+
+
+
+dependencies {
+    compile project(':kinvey-sdk')
+    appengineSdk 'com.google.appengine:appengine-java-sdk:1.9.32'
+
+    providedCompile 'com.google.appengine:appengine-java-sdk:1.9.32' , {
+        ext {
+            fatJarExclude = true
+        }
+    }
+
+    // FatJar ignores the providedCompile directive (however normal WAR exploder respects this)
+    // so we need to make sure it's excluded from the WAR
+    providedCompile 'com.google.appengine:appengine-api-1.0-sdk:1.9.32', {
+        ext {
+            fatJarExclude = true
+        }
+    }
+
+    providedCompile 'javax.servlet:servlet-api:2.5', {
+        ext {
+            fatJarExclude = true
+        }
+    }
+
+    compile 'com.google.appengine:appengine-java-sdk:1.9.32'
+    compile 'com.google.appengine:appengine-api-1.0-sdk:1.9.32'
+//    compile 'com.google.appengine:appengine-api-1.0-sdk:1.9.17'
+//
+//    compile 'com.google.appengine:appengine-endpoints:1.9.17'
+//    compile 'com.google.appengine:appengine-endpoints-deps:1.9.17'
+
+}
+
+
+// GAE defaults
+appengine {
+
+    //ptimizeWar = true
+
+    // Include debugging port
+    jvmFlags = ['-Xdebug', '-Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=8000']
+
+    // NB: This is a HUGE download!
+    downloadSdk = true
+    httpPort = 8080
+
+    appcfg {
+        email = 'madscientist149@gmail.com' // !!! TODO: Configure this prior to deploying
+        passIn = true
+
+        app {
+            id = 'home-automation-1248' // !!! TODO: Configure this prior to deploying
+        }
+    }
+}

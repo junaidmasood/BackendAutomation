@@ -1,0 +1,8 @@
+rootProject.name = 'BackendAutomation'
+
+include 'app'
+
+include 'kinvey-sdk'
+
+include 'kinvey-sdk'
+

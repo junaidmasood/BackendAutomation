@@ -1,0 +1,51 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="Gradle : com.kinvey:app : app-1.0.war (exploded)">
+    <output-path>$PROJECT_DIR$/out/artifacts/app/exploded/app-1.0.war</output-path>
+    <properties id="gradle-properties">
+      <options external-project-path="$PROJECT_DIR$/app" />
+    </properties>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="app/web/Web Gradle : app-1.0.war" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="app" />
+          <element id="dir-copy" path="$PROJECT_DIR$/app/build/resources/main" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="archive" name="com.kinvey-kinvey-sdk-1.0.jar">
+            <element id="module-output" name="kinvey-sdk" />
+            <element id="dir-copy" path="$PROJECT_DIR$/kinvey-sdk/build/resources/main" />
+          </element>
+          <element id="library" level="project" name="Gradle: javax.ws.rs:jsr311-api:1.1.1" />
+          <element id="library" level="project" name="Gradle: com.google.guava:guava:r09" />
+          <element id="library" level="project" name="Gradle: com.sun.jersey:jersey-server:1.17.1" />
+          <element id="library" level="project" name="Gradle: com.sun.jersey:jersey-core:1.17.1" />
+          <element id="library" level="project" name="Gradle: com.sun.jersey:jersey-servlet:1.17.1" />
+          <element id="library" level="project" name="Gradle: com.sun.jersey:jersey-json:1.17.1" />
+          <element id="library" level="project" name="Gradle: com.fasterxml.jackson.core:jackson-core:2.2.1" />
+          <element id="library" level="project" name="Gradle: com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider:2.2.1" />
+          <element id="library" level="project" name="Gradle: com.fasterxml.jackson.core:jackson-databind:2.2.1" />
+          <element id="library" level="project" name="Gradle: com.fasterxml.jackson.core:jackson-annotations:2.2.1" />
+          <element id="library" level="project" name="Gradle: commons-io:commons-io:2.4" />
+          <element id="library" level="project" name="Gradle: asm:asm:3.1" />
+          <element id="library" level="project" name="Gradle: org.codehaus.jettison:jettison:1.1" />
+          <element id="library" level="project" name="Gradle: com.sun.xml.bind:jaxb-impl:2.2.3-1" />
+          <element id="library" level="project" name="Gradle: org.codehaus.jackson:jackson-core-asl:1.9.2" />
+          <element id="library" level="project" name="Gradle: org.codehaus.jackson:jackson-mapper-asl:1.9.2" />
+          <element id="library" level="project" name="Gradle: org.codehaus.jackson:jackson-jaxrs:1.9.2" />
+          <element id="library" level="project" name="Gradle: org.codehaus.jackson:jackson-xc:1.9.2" />
+          <element id="library" level="project" name="Gradle: com.fasterxml.jackson.jaxrs:jackson-jaxrs-base:2.2.1" />
+          <element id="library" level="project" name="Gradle: com.fasterxml.jackson.module:jackson-module-jaxb-annotations:2.2.1" />
+          <element id="library" level="project" name="Gradle: javax.xml.bind:jaxb-api:2.2.2" />
+          <element id="library" level="project" name="Gradle: javax.xml.stream:stax-api:1.0-2" />
+          <element id="library" level="project" name="Gradle: javax.activation:activation:1.1" />
+          <element id="library" level="project" name="Gradle: junit:junit:4.11" />
+          <element id="library" level="project" name="Gradle: org.hamcrest:hamcrest-core:1.3" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/out/artifacts/app/exploded/app-1.0.war/META-INF/MANIFEST.MF" />
+      </element>
+    </root>
+  </artifact>
+</component>

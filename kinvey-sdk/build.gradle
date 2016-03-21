@@ -1,0 +1,20 @@
+task generateDoclava(type: Javadoc) {
+
+    description = "Build the Doclava Javadocs"
+    source = sourceSets.main.allJava
+    options.docletpath = files("3rdParty/doclava-kinvey-custom.jar").asType(List)
+    options.doclet = "com.google.doclava.Doclava"
+    maxMemory = "1024m"
+    classpath = configurations.compile
+    destinationDir = file("${project.docsDir}/apidocs")
+
+
+    title = ""
+
+    options.addStringOption("quiet")
+    options.addStringOption("hdf", "project.name ${project.name}")
+    options.addStringOption("stubs", "${project.docsDir}/stubs")
+    options.addStringOption("apixml", "${project.docsDir}/apidocs/api.xml")
+    options.addStringOption("stubs", "${project.docsDir}/apidocs")
+}
+
